@@ -17,6 +17,12 @@ const FormPersonDetail = props => {
           />
           <TextField
             id='standard-basic'
+            label='University'
+            defaultValue={props.university}
+            onChange={props.handleChange('occupation')}
+          />
+          <TextField
+            id='standard-basic'
             label='Email'
             defaultValue={props.email}
             onChange={props.handleChange('email')}

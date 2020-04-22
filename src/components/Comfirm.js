@@ -5,7 +5,15 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Header from './Header';
 const Confirm = props => {
-  const {firstname, lastname, occupation, email} = props.values;
+  const {
+    firstname,
+    lastname,
+    gender,
+    age,
+    university,
+    occupation,
+    email
+  } = props.values;
   return (
     <MuiThemeProvider>
       <div>
@@ -17,6 +25,15 @@ const Confirm = props => {
             </ListItem>
             <ListItem>
               <strong>Last Name: </strong> {lastname}
+            </ListItem>
+            <ListItem>
+              <strong>Gender: </strong> {gender}
+            </ListItem>
+            <ListItem>
+              <strong>Age: </strong> {age}
+            </ListItem>
+            <ListItem>
+              <strong>University: </strong> {university}
             </ListItem>
             <ListItem>
               <strong>Occupation: </strong> {occupation}

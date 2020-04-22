@@ -9,6 +9,9 @@ class UserForm extends Component {
     step: 1,
     firstname: '',
     lastname: '',
+    gender: '',
+    age: '',
+    university: '',
     occupation: '',
     email: ''
   };
@@ -28,7 +31,16 @@ class UserForm extends Component {
   };
 
   render() {
-    const {step, firstname, lastname, occupation, email} = this.state;
+    const {
+      step,
+      firstname,
+      lastname,
+      gender,
+      age,
+      university,
+      occupation,
+      email
+    } = this.state;
     let form;
     switch (step) {
       case 1:
@@ -36,6 +48,8 @@ class UserForm extends Component {
           <FormUserDetail
             firstname={firstname}
             lastname={lastname}
+            gender={gender}
+            age={age}
             addStep={this.addStep}
             handleChange={this.handleChange}
           />
@@ -44,6 +58,7 @@ class UserForm extends Component {
         return (form = (
           <FormPersonDetail
             occupation={occupation}
+            university={university}
             email={email}
             addStep={this.addStep}
             prevStep={this.prevStep}

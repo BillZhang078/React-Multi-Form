@@ -23,7 +23,18 @@ const FormUserDetail = props => {
             defaultValue={props.lastname}
             onChange={props.handleChange('lastname')}
           />
-
+          <TextField
+            id='standard-basic'
+            label='Gender'
+            defaultValue={props.gender}
+            onChange={props.handleChange('gender')}
+          />
+          <TextField
+            id='standard-basic'
+            label='Age'
+            defaultValue={props.age}
+            onChange={props.handleChange('age')}
+          />
           <div className='btn-container btn-user'>
             <Button
               className='btn'
